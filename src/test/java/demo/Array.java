@@ -49,6 +49,7 @@ public class Array {
         for(int i=1;i<=getDemoArray1.length;i++){
 
             System.out.print(getDemoArray1[i]+",");
+            System.out.println("Test Array");
 
 
         }
