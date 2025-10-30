@@ -10,7 +10,7 @@ public class Array {
     protected static int ac = 20;
     private static int ad = 21;
 
-    /// interger , String array
+    /// integer , String array
     ///
     /// Datatype[] referenceVariable = new DataType[/*sizeofArray*/];
 
@@ -18,7 +18,9 @@ public class Array {
 
     static int[] getDemoArray1 = {15,20,30,25,29,67,90,84,27,89,84,90};
 
-    String[] strArray = {"All","Alexa","Amazon"};
+        String[] strArray = {"All","Alexa","Amazon"};
+
+
 
     public static void main(String[] args) {
 
@@ -48,6 +50,8 @@ public class Array {
 
         for(int i=1;i<=getDemoArray1.length;i++){
 
+            System.out.print(getDemoArray1[i-1]+",");
+            System.out.println("Test Array");
             System.out.print(getDemoArray1[i-1]+",");
 
 
@@ -91,17 +95,8 @@ public class Array {
         //ArrayList
 
 
-
-
-
-
-
-
-
-    }
-
-
-
+        }
 
 
 }
+
