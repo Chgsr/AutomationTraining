@@ -16,7 +16,7 @@ public class Array {
 
     static  int[] demoArray = new int[7];
 
-    static int[] getDemoArray1 = {10,20,30,25,29,67,90,84,27,89,84,90};
+    static int[] getDemoArray1 = {15,20,30,25,29,67,90,84,27,89,84,90};
 
     String[] strArray = {"All","Alexa","Amazon"};
 
@@ -48,14 +48,47 @@ public class Array {
 
         for(int i=1;i<=getDemoArray1.length;i++){
 
-            System.out.print(getDemoArray1[i]+",");
-            System.out.println("Test Array");
+            System.out.print(getDemoArray1[i-1]+",");
 
 
         }
 
+        //printing values which are dividable by 2
+        //static int[] getDemoArray1 = {11,20,30,25,29,67,90,84,27,89,84,90};10/2
+        //to check whether this array has any number which is dividing by 2
+        for (int i=0;i<getDemoArray1.length;i++){
+
+            if (getDemoArray1[i] % 2 == 0){
+
+                System.out.println("Numbers which are dividable by 2 "+getDemoArray1[i]);
+                break;
+            }
+            else {
+
+                System.out.println("Numbers which are not dividable by 2 "+getDemoArray1[i]);
+            }
+
+        }
+        //static int[] getDemoArray1 = {15,20,30,25,29,67,90,84,27,89,84,90};
+        String[] strArray = {"Test","Automation","Java","Selenium"};
+
+        for (int number:getDemoArray1){
+
+            System.out.println(number);
+
+        }
+
+        for (String value:strArray){
+
+            System.out.println(value);
+
+        }
+
+
 
         //practice scenario - create two arrays, print both array values
+
+        //ArrayList
 
 
 
