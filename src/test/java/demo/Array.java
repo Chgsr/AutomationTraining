@@ -1,5 +1,8 @@
 package demo;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Array {
 
     String str = "Test";
@@ -41,10 +44,11 @@ public class Array {
         System.out.println(demoArray[3]);
         System.out.println(demoArray[4]);
 
+
         //loops
         for(int i=0;i< demoArray.length;i++){
 
-            System.out.println(demoArray[i]);
+            System.out.println(demoArray[i]); // demoArray[0],demoArray[1]
             //i=4
         }
 
@@ -62,6 +66,8 @@ public class Array {
         //to check whether this array has any number which is dividing by 2
         for (int i=0;i<getDemoArray1.length;i++){
 
+
+
             if (getDemoArray1[i] % 2 == 0){
 
                 System.out.println("Numbers which are dividable by 2 "+getDemoArray1[i]);
@@ -75,6 +81,22 @@ public class Array {
         }
         //static int[] getDemoArray1 = {15,20,30,25,29,67,90,84,27,89,84,90};
         String[] strArray = {"Test","Automation","Java","Selenium"};
+
+        //Approach -1
+        //Converting String array to List
+        List<String> stringArrayList =  Arrays.asList(strArray);
+        stringArrayList.contains("Selenium");
+
+
+        //Approach - 2
+        for (int i=0;i< strArray.length;i++){
+
+            if (strArray[i].contains("Selenium")){
+
+                System.out.println("True");
+            }
+
+        }
 
         for (int number:getDemoArray1){
 
