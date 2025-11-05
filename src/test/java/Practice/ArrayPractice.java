@@ -1,8 +1,8 @@
 //practice scenario - create two arrays, print both array values
 
-package demo;
+package Practice;
 
-public class TwoArraysPractice
+public class ArrayPractice
 {
     /* static variables belong to the class and allows main() to access them directly
     without needing to create an object of TwoArraysPractice. */
