@@ -5,9 +5,11 @@ public class StringsTest {
 
    static String s = "Selenium Class";
    static String s1 = " Selenium with JAVA Class";
+   static String s2 = "Selenium Class";
 
-    String s3 = new String("Selenium");
-    String s4 = new String("Selenium");
+    static String s3 = new String("Selenium");
+    static String s4 = new String("Selenium");
+
 
 
     public static void main(String[] args) {
@@ -16,6 +18,15 @@ public class StringsTest {
         System.out.println(s1.hashCode());
         System.out.println(s);
         System.out.println(s1);
+        System.out.println(s3.hashCode());
+        System.out.println(s4.hashCode());
+
+
+        System.out.println(System.identityHashCode(s));
+        System.out.println(System.identityHashCode(s1));
+        System.out.println(System.identityHashCode(s2));
+        System.out.println(System.identityHashCode(s3));
+        System.out.println(System.identityHashCode(s4));
 
         StringsTest test = new StringsTest();
 
