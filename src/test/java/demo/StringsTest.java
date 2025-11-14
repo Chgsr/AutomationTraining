@@ -48,7 +48,7 @@ public class StringsTest {
         }
         System.out.println(" ");
 
-        String[] splittedString = s1.split("with"); //. 1. seleinum 2 JAVA Class
+        String[] splittedString = s1.split("with"); //. 1. selenium 2 JAVA Class
 
         for(String value: splittedString){
 
