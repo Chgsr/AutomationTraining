@@ -1,44 +1,33 @@
- package demo;
+package Practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
 
-public class LocatorsDemo {
+public class LocatorsPractice {
 
     public static void main(String[] args) {
-
-        //Webdriver
-        //implicit 5
-
-
-
-
-
-
-        //tagname.classname
 
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
-        driver.findElement(By.id("inputUsername")).sendKeys("Gunashekar939");
+        //<input type="text" placeholder="Username" id="inputUsername" value="" fdprocessedid="oorxl">
+        driver.findElement(By.id("inputUsername")).sendKeys("Raji123");
 
-        driver.findElement(By.name("inputPassword")).sendKeys("Rainbow_3");
+        //<input type="password" placeholder="Password" name="inputPassword" value="" fdprocessedid="34rnhg">
+        driver.findElement(By.name("inputPassword")).sendKeys("Kamaraj@123");
 
-        //driver.findElement(By.className("submit")).click(); button.signInBtn button.submit button.submit.signInButton
+        //<button class="submit signInBtn" type="submit" fdprocessedid="6ve3dw">Sign In</button>
         driver.findElement(By.className("signInBtn")).click();
 
         System.out.println(driver.findElement(By.className("error")).getText());
 
         driver.quit();
-
     }
 }

@@ -10,7 +10,7 @@ public class MethodsDemo {
         System.out.println("Test Method Calling");
 
     }
-    public  void testMethodNonStatic (){
+    public void testMethodNonStatic (){
 
         System.out.println("Method Calling Non Static");
 
