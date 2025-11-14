@@ -13,6 +13,9 @@ public class CSSDemo {
     //id (#) -- tagname#id
     //customized css  -- tagName[attributeName='attributeValue']
 
+    //Xpath
+    // //tagName[@attributeName='attributeValue']
+
     public static void main(String[] args) {
 
 
@@ -36,6 +39,28 @@ public class CSSDemo {
         driver.findElement(By.cssSelector("button.submit.signInBtn")).click();
 
         System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
+
+        driver.findElement(By.linkText("Forgot your password?")).click();
+
+        //driver.findElement(By.partialLinkText("password?")).click();
+
+        //<input type="text" placeholder="Name">  //input[@placeholder='Name'] //input[@type='text']
+
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Gunashekar");
+
+        //<input type="text" placeholder="Email">  //input[@placeholder='Email'] input[placeholder='Email']  //input[@type='text'][2]
+
+        driver.findElement(By.xpath("//input[@type='text'][2]")).sendKeys("chgunareddy@gmail.co");
+        driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
+        driver.findElement(By.xpath("//input[@type='text'][2]")).sendKeys("chgunareddy@gmail.com");
+        driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("9392705090");
+        driver.findElement(By.className("reset-pwd-btn")).click();
+
+        String rawPassword = driver.findElement(By.cssSelector(".infoMsg")).getText();
+
+        System.out.println(rawPassword);
+
+        //Please use temporary password 'rahulshettyacademy' to Login.
 
         driver.quit();;
 
