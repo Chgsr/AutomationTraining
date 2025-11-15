@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.sql.SQLOutput;
 import java.time.Duration;
 
 public class CSSPractice {
@@ -12,6 +13,9 @@ public class CSSPractice {
     //class (.) -- tagname.classname
     //id (#) -- tagname#id
     //customized css  -- tagName[attributeName='attributeValue']
+
+    //Xpath
+    // //tagname[@attribute='attributeValue']
 
     public static void main(String[] args) {
 
@@ -37,6 +41,35 @@ public class CSSPractice {
         //<p class="error">* Incorrect username or password </p>
         //p.error
         System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
+
+        //driver.findElement(By.linkText("Forgot your password?")).click();
+        driver.findElement(By.partialLinkText("password?")).click();
+
+        //<input type="text" placeholder="Name">
+        // //input[@placeholder='Name']
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Rajakumari");
+
+        //<input type="text" placeholder="Email">
+        // //input[@placeholder='Email']
+        driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("raji@gmail.co");
+        driver.findElement(By.xpath("//input[@placeholder='Email']")).clear();
+        driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("raji@gmail.com");
+
+        //<input type="text" placeholder="Phone Number">
+        // //input[@placeholder='Phone Number']
+        driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("123456789");
+
+        //<button class="reset-pwd-btn">Reset Login</button>
+        //button.reset-pwd-btn
+        driver.findElement(By.className("reset-pwd-btn")).click();
+
+        //<p class="infoMsg">Please use temporary password 'rahulshettyacademy' to Login. </p>
+        String rawPassword = driver.findElement(By.cssSelector(".infoMsg")).getText();
+
+        String[] splittedString = rawPassword.split(" ");
+
+        System.out.println(splittedString[4]);
+        System.out.println(splittedString[3]);
 
         driver.quit();
 

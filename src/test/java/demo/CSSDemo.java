@@ -58,12 +58,12 @@ public class CSSDemo {
 
         String rawPassword = driver.findElement(By.cssSelector(".infoMsg")).getText();
 
+        //Please use temporary password 'rahulshettyacademy' to Login.
+
         String[] splittedString = rawPassword.split(" ");
 
         System.out.println(splittedString[4]);
         System.out.println(splittedString[3]);
-
-        //Please use temporary password 'rahulshettyacademy' to Login.
 
         driver.quit();;
 
