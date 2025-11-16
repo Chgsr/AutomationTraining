@@ -58,12 +58,25 @@ public class CSSDemo {
 
         String rawPassword = driver.findElement(By.cssSelector(".infoMsg")).getText();
 
+        String password = rawPassword.split("'")[1];
+
         //Please use temporary password 'rahulshettyacademy' to Login.
+        //please
+        //use
+        //temporary
+        //password
+        //'rahulshetty'
+        //to
+        //login
 
         String[] splittedString = rawPassword.split(" ");
 
-        System.out.println(splittedString[4]);
-        System.out.println(splittedString[3]);
+        //Please use temporary password
+        //rahulshettyacademy
+        // to login
+
+        System.out.println(splittedString[4].replace("'",""));
+        //System.out.println(splittedString[3]);
 
         driver.quit();;
 
