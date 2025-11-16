@@ -66,10 +66,10 @@ public class CSSPractice {
         //<p class="infoMsg">Please use temporary password 'rahulshettyacademy' to Login. </p>
         String rawPassword = driver.findElement(By.cssSelector(".infoMsg")).getText();
 
-        String[] splittedString = rawPassword.split(" ");
-
-        System.out.println(splittedString[4]);
-        System.out.println(splittedString[3]);
+        String Password = rawPassword.split("'")[1];
+        System.out.println(Password);
+        //String[] Password = rawPassword.split("'");
+        //System.out.println(Password[1]);
 
         driver.quit();
 
