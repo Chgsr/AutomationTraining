@@ -68,8 +68,15 @@ public class CSSPractice {
 
         String Password = rawPassword.split("'")[1];
         System.out.println(Password);
+        //Please use temporary password
+        //rahulshettyacademy
+        // to login
+        //Or
         //String[] Password = rawPassword.split("'");
         //System.out.println(Password[1]);
+        //Or
+        //String[] Password = rawPassword.split(" ");
+        //System.out.println(Password[4].replace("'",""));
 
         driver.quit();
 
