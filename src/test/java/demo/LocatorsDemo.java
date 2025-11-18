@@ -14,11 +14,6 @@ public class LocatorsDemo {
         //Webdriver
         //implicit 5
 
-
-
-
-
-
         //tagname.classname
 
         WebDriver driver = new ChromeDriver();
