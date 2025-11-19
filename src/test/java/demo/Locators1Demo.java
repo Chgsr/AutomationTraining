@@ -33,11 +33,6 @@ public class Locators1Demo {
 
         Assert.assertEquals(successMessage,"You are successfully logged in.");
 
-
-
-
-
-
         // //form/input
         // form input
         //testng junit
