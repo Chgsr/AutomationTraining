@@ -23,7 +23,7 @@ public class ParentChildLocatorsPractice {
         // Testng and junit are frameworks
 
         //<input type="text" placeholder="Username" id="inputUsername" value="" fdprocessedid="i6ds8d">
-        driver.findElement(By.cssSelector())
+        //driver.findElement(By.cssSelector());
 
 
     }
