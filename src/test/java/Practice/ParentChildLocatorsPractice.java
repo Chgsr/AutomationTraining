@@ -24,10 +24,13 @@ public class ParentChildLocatorsPractice {
         // Testng and junit are frameworks
 
         //<input type="text" placeholder="Username" id="inputUsername" value="" fdprocessedid="i6ds8d">
+        // need to write Xpath
         driver.findElement(By.cssSelector("#container div:nth-child(2) form input:nth-child(2)")).sendKeys("Raji123");
         //<input type="password" placeholder="Password" name="inputPassword" value="" fdprocessedid="yom2pr">
+        // need to write Xpath
         driver.findElement(By.cssSelector("#container div:nth-child(2) form input:nth-child(3)")).sendKeys("rahulshettyacademy");
         //<button class="submit signInBtn" type="submit" fdprocessedid="k55wvk">Sign In</button>
+        // need to write Xpath
         driver.findElement(By.className("signInBtn")).click();
 
         Thread.sleep(1000);
