@@ -65,11 +65,22 @@ public class DropDownPractice {
         int noOfChildren = 2;
 
         int j=1 ;
-        while (j<noOfChildren){
+        while (j<=noOfChildren){
 
             //<span class="pax-add pax-enabled" id="hrefIncChd">+</span>
             driver.findElement(By.id("hrefIncChd")).click();
             j++;
+        }
+
+        int noOfInfants = 2;
+
+        int z=1;
+        while (z<=noOfInfants){
+
+            //<span class="pax-add pax-enabled" id="hrefIncInf" disabled="disabled">+</span>
+            driver.findElement(By.id("hrefIncInf")).click();
+            z++;
+
         }
 
         //<input class="buttonN" id="btnclosepaxoption" value="Done" type="button">
@@ -77,9 +88,9 @@ public class DropDownPractice {
 
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 
-        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(),noOfPassengers+" Adult");
-        //Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(),noOfChildren+" Children");
-       // driver.quit();
+        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(),noOfPassengers+" Adult, " + noOfChildren+" Child, " + noOfInfants+" Infant");
+
+       driver.quit();
 
   }
 }
