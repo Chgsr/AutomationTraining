@@ -17,7 +17,7 @@ public class DynamicDropdownsDemo {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
-        ////a[@value='BLR']
+        // //a[@value='BLR']
 
         //(//a[@value='MAA'])[2]
 
