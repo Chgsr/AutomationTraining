@@ -42,10 +42,5 @@ public class DynamicDropdownsDemo {
 
         driver.quit();
 
-
-
-
-
-
     }
 }
