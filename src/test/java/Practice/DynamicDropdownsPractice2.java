@@ -27,8 +27,11 @@ public class DynamicDropdownsPractice2 {
             String City = Value.getText();
             if (City.equalsIgnoreCase("India")) {
                 Value.click();
+                break;
             }
         }
+
+        driver.quit();
 
 
     }
