@@ -9,7 +9,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
-public class DynamicDropdownsPractice1 {
+public class DynamicDropdownsPractice {
 
     public static void main(String[] args) throws InterruptedException {
 

@@ -47,7 +47,8 @@ public class DynamicDropdownsDemo {
         // 3. is checkbox enabled
         // 4. is dropdown displayed and enabled
 
-         WebElement seniorCitizenCheckbox = driver.findElement(By.cssSelector("input[name*='SeniorCitizenDiscount']"));
+
+        WebElement seniorCitizenCheckbox = driver.findElement(By.cssSelector("input[name*='SeniorCitizenDiscount']"));
 
         List<WebElement> checkboxesList = driver.findElements(By.cssSelector("input[type='checkbox']"));
 

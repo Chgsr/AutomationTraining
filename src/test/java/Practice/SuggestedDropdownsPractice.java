@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class DynamicDropdownsPractice2 {
+public class SuggestedDropdownsPractice {
 
     public static void main(String[] args) throws InterruptedException {
 
