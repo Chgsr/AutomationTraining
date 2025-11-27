@@ -1,4 +1,4 @@
-package demo;
+package Practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,25 +7,19 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class AlertsDemo {
-
-    // Alerts
-    // best practices and format (Ctrl+Alt+L)
-    // debugging
-    //button[text()='ADD TO CART'] - Xpath for button with text
-
+public class AlertPractice {
 
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
-        String name = "Guna";
+        String name = "Raji";
 
-        driver.findElement(By.id("name")).sendKeys(name);
+        //<input id="name" name="enter-name" class="inputs" placeholder="Enter Your Name" type="text" fdprocessedid="wdk3po">
+        driver.findElement(By.id("name")).sendKeys(name); //dynamic input
+        //<input id="alertbtn" class="btn-style" value="Alert" onclick="displayAlert()" type="submit" fdprocessedid="mxj01h">
         driver.findElement(By.id("alertbtn")).click();
 
         String alertMessage = driver.switchTo().alert().getText();
@@ -34,6 +28,7 @@ public class AlertsDemo {
         Assert.assertEquals(alertMessage, "Hello " + name + ", share this practice page and share your knowledge");
         driver.switchTo().alert().accept();
 
+        //<input id="confirmbtn" class="btn-style" value="Confirm" onclick="displayConfirm()" type="submit" fdprocessedid="r5xucr">
         driver.findElement(By.id("name")).sendKeys(name);
         driver.findElement(By.id("confirmbtn")).click();
 
@@ -41,14 +36,9 @@ public class AlertsDemo {
         System.out.println(alertMessage);
 
         Assert.assertEquals(alertMessage, "Hello " + name + ", Are you sure you want to confirm?");
-
         driver.switchTo().alert().dismiss();
-
 
         driver.quit();
 
-
     }
-
-
 }

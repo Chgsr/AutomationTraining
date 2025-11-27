@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CheckboxPractice {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -45,12 +45,12 @@ public class CheckboxPractice {
         // 3. is checkbox enabled
         // 4. is dropdown displayed and enabled
 
-        for (WebElement checkbox : CheckboxesList){
+        for (WebElement checkbox : CheckboxesList) {
 
             System.out.println(checkbox.isDisplayed());
         }
 
-        if(SeniorCitizenCheckbox.isDisplayed() && SeniorCitizenCheckbox.isEnabled()){
+        if (SeniorCitizenCheckbox.isDisplayed() && SeniorCitizenCheckbox.isEnabled()) {
 
             SeniorCitizenCheckbox.click();
         }
@@ -60,15 +60,28 @@ public class CheckboxPractice {
         Assert.assertTrue(SeniorCitizenCheckbox.isSelected());
 
         //Return Date
-        //Round trip - <input id="ctl00_mainContent_rbtnl_Trip_1" type="radio" name="ctl00$mainContent$rbtnl_Trip" value="RoundTrip" checked="checked">
+        //Round trip option - <input id="ctl00_mainContent_rbtnl_Trip_1" type="radio" name="ctl00$mainContent$rbtnl_Trip" value="RoundTrip" checked="checked">
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
 
 
+        // Return Date Enabled - <div id="Div1" class="picker-second" style="display: block; opacity: 1;">
+        //Return Date Disabled - <div id="Div1" class="picker-second" style="display: block; opacity: 0.5;">
+        WebElement ReturnDate = driver.findElement(By.cssSelector("#Div1"));
+        String attributeValue = ReturnDate.getAttribute("style").split("opacity:")[1].trim().replace(";", "");
 
+        //convert the string into a float number using Float.parseFloat(attributeValue);
+        float opacityValue = Float.parseFloat(attributeValue);
 
+        if (opacityValue == 0.5) {
 
+            System.out.println("Return Date is Disabled");
 
+        } else {
 
+            System.out.println("Return Date is Enabled");
+        }
+
+        driver.quit();
 
     }
 }
