@@ -1,6 +1,7 @@
 package Practice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -20,18 +21,20 @@ public class ParentChildLocatorsPractice {
 
         // xpath - //form/input
         // css - form input
-        //Assert class from testing framework
+        //Assert class from testng framework
         // Testng and junit are frameworks
 
         //<input type="text" placeholder="Username" id="inputUsername" value="" fdprocessedid="i6ds8d">
-        // need to write Xpath
-        driver.findElement(By.cssSelector("#container div:nth-child(2) form input:nth-child(2)")).sendKeys("Raji123");
+        driver.findElement(By.xpath("//div[@id='container']/div[2]/form/input[1]")).sendKeys("Raji123");
+        //driver.findElement(By.cssSelector("#container div:nth-child(2) form input:nth-child(2)")).sendKeys("Raji123");
+
         //<input type="password" placeholder="Password" name="inputPassword" value="" fdprocessedid="yom2pr">
-        // need to write Xpath
-        driver.findElement(By.cssSelector("#container div:nth-child(2) form input:nth-child(3)")).sendKeys("rahulshettyacademy");
+        driver.findElement(By.xpath("//div[@id='container']/div[2]/form/input[2]")).sendKeys("rahulshettyacademy");
+        //driver.findElement(By.cssSelector("#container div:nth-child(2) form input:nth-child(3)")).sendKeys("rahulshettyacademy");
+
         //<button class="submit signInBtn" type="submit" fdprocessedid="k55wvk">Sign In</button>
-        // need to write Xpath
-        driver.findElement(By.className("signInBtn")).click();
+        driver.findElement(By.xpath("//div[@id='container']/div[2]/form/button")).click();
+        //driver.findElement(By.className("signInBtn")).click();
 
         Thread.sleep(1000);
 
