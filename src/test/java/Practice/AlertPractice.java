@@ -9,6 +9,15 @@ import java.time.Duration;
 
 public class AlertPractice {
 
+    // Alerts
+    /* best practices and format (Ctrl+Alt+L)
+    Classname - Starts with capital letter and following words also starts with capital letter
+    Method name - Starts with small letter and following words starts with capital letter
+    Variable = Starts with small letter and following words starts with capital letter*/
+    // debugging
+    /*Xpath for button with text - syntax -  tagname[text()='attributevalue']
+    button[text()='ADD TO CART']*/
+
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
