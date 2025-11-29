@@ -2,7 +2,7 @@ package demo;
 
 public class MethodsDemo {
 
-    //Syntax : AccessModifier static/notstaic returnType methodname (){}
+    //Syntax : AccessModifier static/nonstatic returnType methodname (){}
 
     public static void testMethodStatic (){
 

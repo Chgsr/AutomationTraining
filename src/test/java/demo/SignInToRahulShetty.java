@@ -53,7 +53,9 @@ public class SignInToRahulShetty {
 
         driver.findElement(By.className("logout-btn")).click();
 
-        Assert.assertEquals(driver.findElement(By.cssSelector("form h1")).getText(),"Sign in");  //Hello gunashekar,
+        Assert.assertEquals(driver.findElement(By.cssSelector("form h1")).getText(),"Sign in");//Hello gunashekar,
+        System.out.println(driver.findElement(By.cssSelector("form h1")).getText());
+
 
 
 
