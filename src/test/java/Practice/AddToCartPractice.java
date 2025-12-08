@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,14 +28,15 @@ public class AddToCartPractice {
         //xpath for totalproducts to read all productnames
         List<WebElement> totalProducts = driver.findElements(By.xpath("//h4[@class='product-name']"));
 
+        List<String> productNames = new ArrayList<>();
+
         //Loop through each product
         for (int i = 0; i < totalProducts.size(); i++) {
 
             //Extract only the product name (“Cucumber”, “Carrot”)
             String productName = totalProducts.get(i).getText().split("-")[0].trim();
-
+            productNames.add(productName);
             int j = 0;
-
             //Check if the name matches with productlist
             //If yes → click Add to Cart
             //Stop when all required items are added
@@ -42,7 +44,6 @@ public class AddToCartPractice {
 
                 driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
                 j++;
-
                 if (j == productList.size()) {
                     break;
                 }
@@ -50,6 +51,8 @@ public class AddToCartPractice {
             }
 
         }
+        System.out.println("Total products added: " + productNames);
+        driver.quit();
 
 
     }

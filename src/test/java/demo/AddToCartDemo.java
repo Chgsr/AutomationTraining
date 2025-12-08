@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -16,8 +17,7 @@ public class AddToCartDemo {
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-            driver.get("https://rahulshettyacademy.com/seleniumPractise/");
+        driver.get("https://rahulshettyacademy.com/seleniumPractise/");
 
         //click on cucumber Add to Cart
         // //button[text()='ADD TO CART']  --  30 items  29
@@ -25,7 +25,7 @@ public class AddToCartDemo {
 
         String name = "Beetroot";
 
-        String[] productsToAdd = {"Beetroot", "Cucumber", "Carrot", "Brinjal"};
+        String[] productsToAdd = {"Beetroot", "Cucumber", "Carrot", "Brinjal","Apple"};
 
         List<String> productList = Arrays.asList(productsToAdd);
 
@@ -48,11 +48,10 @@ public class AddToCartDemo {
                 if (j == productList.size()) {
                     break;
                 }
-
-
             }
 
         }
+        //driver.quit();
 
     }
 

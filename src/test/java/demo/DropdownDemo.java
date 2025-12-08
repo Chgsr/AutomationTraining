@@ -18,6 +18,8 @@ public class DropdownDemo {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
+        // (//input[@name=’Selenium’])[3] - 3 elements
+
         // tag name must be select to use select class features
 
         WebElement currencyDropdown = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
