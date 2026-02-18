@@ -55,6 +55,22 @@ public class NestedLoopPractice {
             System.out.print("\n");
         }*/
 
+        /* 4. output for below code : * * * *
+                                      * * *
+                                      * *
+                                      *           */
+
+        /*  for (int i = 1; i <= 4; i++) {
+
+            for (int j = 4; j >= i; j--) {
+
+                System.out.print("*");
+                System.out.print("\t");
+            }
+            System.out.print("\n");
+        }*/
+
+        //Another way of approach
         for (int i = 0; i < 4; i++) {
 
             for (int j = 1; j <= 4 - i; j++) {
@@ -65,22 +81,6 @@ public class NestedLoopPractice {
             System.out.println("");
 
         }
-
-
-        /* 4. output for below code : * * * *
-         * * *
-         * *
-         *           */
-
-        /*for (int i = 1; i <= 4; i++) {
-
-            for (int j = 4; j >= i; j--) {
-
-                System.out.print("*");
-                System.out.print("\t");
-            }
-            System.out.print("\n");
-        }*/
 
 
     }
