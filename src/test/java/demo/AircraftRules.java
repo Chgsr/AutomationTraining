@@ -1,6 +1,6 @@
 package demo;
 
-public abstract   class AircraftRules  {
+public abstract class AircraftRules  {
 
 
     public void name(){
